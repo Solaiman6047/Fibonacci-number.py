@@ -1,12 +1,19 @@
 x=[]
 y=[]
-while x !=" ":
-    x.append(int(input("Enter the x part of the coordinate:")))
-    y.append(int(input("Enter the y part of the coordinate:")))
-    print(x)
-    print(y) 
-    if x==" ":
+ans=0
+
+while True:
+    x_input=input("Enter the x part of the coordinate:")
+    if x_input==" ":
         break
-for i in range(len(x)-1):
-    ans=(x[i+1]-x[i])+(y[i+1]-y[i])**0.5
-print(ans)
+    x.append(int(x_input))
+    y_input=input("Enter the y part of the coordinate:")
+    y.append(int(y_input))
+    
+if len(x) != len(y):
+    print("Error: Number of x and y coordinates must be the same.")
+    
+else:
+    for i in range(len(x)):
+        ans+=((x[i-1]-x[i])**2+(y[i-1]-y[i])**2)**0.5
+    print(f"Perimeter= {ans}")
