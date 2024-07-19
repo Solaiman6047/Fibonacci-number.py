@@ -10,8 +10,8 @@ while True:
     y_input=input("Enter the y part of the coordinate:")
     y.append(int(y_input))
     
-if len(x) != len(y):
-    print("Error: Number of x and y coordinates must be the same.")
+if len(x)<2:
+    print("Error: Not a polygon.")
     
 else:
     for i in range(len(x)):
