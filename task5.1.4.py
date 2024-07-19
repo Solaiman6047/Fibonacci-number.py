@@ -10,7 +10,7 @@ while True:
     y_input=input("Enter the y part of the coordinate:")
     y.append(int(y_input))
     
-if len(x)<2:
+if len(x)<3:
     print("Error: Not a polygon.")
     
 else:
